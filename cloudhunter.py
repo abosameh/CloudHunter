@@ -468,7 +468,7 @@ class HiddenGems(object):
 		return list(set(imgs))
 
 	def extract_raw_links(self, source_code):
-		urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[/?=\-_@.&+]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', source_code)
+		urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[?=_@.&+]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', source_code)
 		return list(set(urls))
 
 	def extract_styles(self, source_code):
@@ -655,13 +655,9 @@ def what_cloud_worker(queue, results, enable_write):
 
 
 def show_banner():
-    banner = f'''\033[0;32m
-           ________                ____  __            __
-          / ____/ /___  __  ______/ / / / /_  ______  / /____  _____
-         / /   / / __ \/ / / / __  / /_/ / / / / __ \/ __/ _ \/ ___/
-        / /___/ / /_/ / /_/ / /_/ / __  / /_/ / / / / /_/  __/ /
-        \____/_/\____/\__,_/\__,_/_/ /_/\__,_/_/ /_/\__/\___/_/  v{__version__}
-        \n\033[0;0m'''
+    banner = f'''
+ 
+       '''
     print(banner)
 
 
